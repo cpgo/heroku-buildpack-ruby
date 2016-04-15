@@ -25,6 +25,8 @@ class LanguagePack::Base
         "ubuntu-14.04"
       when /^7/
         "debian-7"
+      when /^8/
+        "debian-8"
       end
     elsif File.exists?("/etc/redhat-release")
       redhat_release = File.read("/etc/redhat-release").chomp
@@ -43,6 +45,8 @@ class LanguagePack::Base
       case suse_release
       when /^SUSE Linux Enterprise Server 12/i
         "sles-12"
+      when /^SUSE Linux Enterprise Server 11/i
+        "sles-11"
       end
     end
     raise "Can't find binaries for distribution. Aborting." if result.nil?
