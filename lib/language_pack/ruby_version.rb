@@ -86,13 +86,14 @@ module LanguagePack
     end
 
     def set_version
-      if @bundler_output.empty?
-        @set     = false
-        @version = none
-      else
-        @set     = :gemfile
-        @version = @bundler_output
-      end
+      #if @bundler_output.empty?
+      ##  @set     = false
+      #  @version = none
+      #else
+      #  @set     = :gemfile
+      #  @version = @bundler_output
+      #end
+      "2.6.3"
     end
 
     def parse_version
